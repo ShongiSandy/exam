@@ -28,10 +28,10 @@ const CustomerSidebar: React.FC<CustomerSidebarProps> = ({
     <aside
       className={cn(
         "flex h-screen flex-col",
-        "bg-[#e87a64] dark:bg-[#132541] text-white/90",
+        "bg-primary dark:bg-primary-dark text-white/90",
         "transition-all duration-500 ease-in-out",
         "relative z-30",
-        "border-r border-[#e87a64]/20 dark:border-[#132541]/20",
+        "border-r border-primary/20 dark:border-primary-dark/20",
         isCollapsed ? "w-20" : "w-72",
       )}
     >
@@ -49,11 +49,11 @@ const CustomerSidebar: React.FC<CustomerSidebarProps> = ({
         className={cn(
           "absolute top-1/2 -right-3 transform -translate-y-1/2",
           "w-6 h-6 rounded-full",
-          "bg-white dark:bg-[#132541]",
+          "bg-white dark:bg-primary-dark",
           "flex items-center justify-center",
           "hover:scale-110 transition-transform duration-200",
-          "border border-[#e87a64]/20 dark:border-white/20",
-          "text-[#e87a64] dark:text-white/90",
+          "border border-primary/20 dark:border-white/20",
+          "text-primary dark:text-white/90",
           "shadow-md"
         )}
         aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}

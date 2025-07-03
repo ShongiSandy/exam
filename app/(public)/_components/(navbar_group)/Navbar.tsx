@@ -151,8 +151,8 @@ const Navbar = () => {
     className={cn(
       "sticky top-0 z-40 w-full transition-all duration-500 ease-in-out",
       scrolled
-        ? "bg-white/90 dark:bg-gradient-to-r dark:from-burgundy-dark dark:via-burgundy-light dark:to-burgundy-dark backdrop-blur-sm border-b-2 border-[#1A0F0F] shadow-lg shadow-black/20 translate-y-0"
-        : "bg-white dark:bg-gradient-to-r dark:from-burgundy-dark dark:via-burgundy-light dark:to-burgundy-dark border-b-2 border-[#1A0F0F] -translate-y-1"
+        ? "bg-white/90 dark:bg-gradient-to-r dark:from-primary-dark dark:via-primary-light dark:to-primary-dark backdrop-blur-sm border-b-2 border-primary-dark shadow-lg shadow-black/20 translate-y-0"
+        : "bg-white dark:bg-gradient-to-r dark:from-primary-dark dark:via-primary-light dark:to-primary-dark border-b-2 border-primary-dark -translate-y-1"
     )}
   >
       <nav className="container mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-24">

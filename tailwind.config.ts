@@ -10,10 +10,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        burgundy: {
-          dark: '#1A0F0F',
-          light: '#2A1818',
-          shine: '#3D2929'
+        primary: {
+          DEFAULT: 'hsl(215, 80%, 20%)',
+          dark: '#0A1A2F',
+          light: '#142B4E',
+          shine: '#1E3A6D',
+          foreground: 'hsl(var(--primary-foreground))'
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -24,10 +26,6 @@ export default {
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))'
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',

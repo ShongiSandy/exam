@@ -69,17 +69,17 @@ export default function TicketDetailPage() {
       <Button
         onClick={() => router.push("/customer/mymessages")}
         variant="ghost"
-        className="text-[#e87a64] hover:text-[#e87a64]/80 hover:bg-[#e87a64]/10 dark:text-white dark:hover:text-white/80 dark:hover:bg-[#132541]/10"
+        className="text-primary hover:text-primary/80 hover:bg-primary/10 dark:text-white dark:hover:text-white/80 dark:hover:bg-primary-dark/10"
       >
         <ArrowLeft className="h-4 w-4" />
         Back to Messages
       </Button>
 
       {/* Ticket Details Card */}
-      <Card className="bg-[#e87a64]/10 dark:bg-[#132541]/10 border-[#e87a64]/20 dark:border-[#132541]/20 shadow-lg">
+      <Card className="bg-primary/10 dark:bg-primary-dark/10 border-primary/20 dark:border-primary-dark/20 shadow-lg">
         <CardHeader className="space-y-4">
           <div className="flex items-center justify-between">
-            <CardTitle className="text-2xl font-bold text-[#e87a64] dark:text-white">
+            <CardTitle className="text-2xl font-bold text-primary dark:text-white">
               {ticket.title}
             </CardTitle>
             <StatusBadge status={ticket.status as TicketStatus} />
@@ -92,8 +92,8 @@ export default function TicketDetailPage() {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="bg-[#e87a64]/5 dark:bg-[#132541]/5 rounded-lg p-4">
-            <div className="font-medium text-[#e87a64] dark:text-white mb-2 flex items-center gap-2">
+          <div className="bg-primary/5 dark:bg-primary-dark/5 rounded-lg p-4">
+            <div className="font-medium text-primary dark:text-white mb-2 flex items-center gap-2">
               <MessageCircle className="h-4 w-4" />
               Initial Message
             </div>
@@ -101,7 +101,7 @@ export default function TicketDetailPage() {
               {ticket.message}
             </div>
             {ticket.attachmentUrl && (
-              <div className="mt-4 flex items-center gap-2 text-[#e87a64] hover:text-[#e87a64]/80 dark:text-white dark:hover:text-white/80">
+              <div className="mt-4 flex items-center gap-2 text-primary hover:text-primary/80 dark:text-white dark:hover:text-white/80">
                 <Paperclip className="h-4 w-4" />
                 <a
                   href={ticket.attachmentUrl}
@@ -119,12 +119,12 @@ export default function TicketDetailPage() {
 
       {/* Messages */}
       <div className="space-y-4">
-        <h2 className="text-lg font-semibold text-[#e87a64] dark:text-white">Conversation History</h2>
+        <h2 className="text-lg font-semibold text-primary dark:text-white">Conversation History</h2>
         {ticket.messages?.map((message) => (
-          <Card key={message.id} className="bg-[#e87a64]/5 dark:bg-[#132541]/5 border-[#e87a64]/10 dark:border-[#132541]/10 shadow">
+          <Card key={message.id} className="bg-primary/5 dark:bg-primary-dark/5 border-primary/10 dark:border-primary-dark/10 shadow">
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between">
-                <div className="font-medium text-[#e87a64] dark:text-white">
+                <div className="font-medium text-primary dark:text-white">
                   {message.senderName}
                 </div>
                 <div className="text-sm text-muted-foreground" suppressHydrationWarning>
@@ -137,7 +137,7 @@ export default function TicketDetailPage() {
                 {message.content}
               </div>
               {message.attachmentUrl && (
-                <div className="mt-3 flex items-center gap-2 text-[#e87a64] hover:text-[#e87a64]/80 dark:text-white dark:hover:text-white/80">
+                <div className="mt-3 flex items-center gap-2 text-primary hover:text-primary/80 dark:text-white dark:hover:text-white/80">
                   <Paperclip className="h-4 w-4" />
                   <a
                     href={message.attachmentUrl}

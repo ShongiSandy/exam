@@ -60,10 +60,10 @@ export default function NavigationLinks({ isCollapsed }: NavigationLinksProps) {
                   "rounded-lg",
                   "transition-all duration-500 ease-out", // Slower, smoother transition
                   "transform hover:scale-105 hover:-translate-y-0.5", // Added slight lift effect
-                  "hover:bg-gradient-to-r hover:from-[#e87a64] hover:to-[#132541]", // Gradient background on hover
-                  active && "bg-gradient-to-r from-[#e87a64] to-[#132541] text-white shadow-lg",
+                  "hover:bg-gradient-to-r hover:from-primary hover:to-primary-dark", // Gradient background on hover
+                  active && "bg-gradient-to-r from-primary to-primary-dark text-white shadow-lg",
                   "relative overflow-hidden",
-                  "hover:shadow-lg hover:shadow-[#e87a64]/20", // Colored shadow
+                  "hover:shadow-lg hover:shadow-primary/20", // Colored shadow
                   "group"
                 )}
               >
@@ -103,12 +103,12 @@ export default function NavigationLinks({ isCollapsed }: NavigationLinksProps) {
                   <div 
                     className={cn(
                       "absolute left-full ml-2 px-3 py-2", // Increased padding
-                      "bg-gradient-to-r from-[#e87a64] to-[#132541]", // Matching gradient
+                      "bg-gradient-to-r from-primary to-primary-dark", // Matching gradient
                       "text-white rounded-lg text-sm whitespace-nowrap",
                       "opacity-0 pointer-events-none",
                       "transform -translate-x-2 transition-all duration-300",
                       "group-hover:opacity-100 group-hover:translate-x-0",
-                      "shadow-lg shadow-[#e87a64]/20", // Matching shadow
+                      "shadow-lg shadow-primary/20", // Matching shadow
                       "z-50"
                     )}
                   >

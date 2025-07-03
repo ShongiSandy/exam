@@ -32,9 +32,8 @@ const MainContentHeader = () => {
       "sticky top-0 z-50",
       "h-16 px-8",
       "flex items-center justify-between gap-4",
-      "bg-gradient-to-r from-[#e87a64] via-[#e87a64]/90 to-[#e87a64]/80",
-      "dark:from-[#132541] dark:via-[#132541]/90 dark:to-[#132541]/80",
-      "shadow-lg shadow-[#e87a64]/10 dark:shadow-[#132541]/10",
+      "bg-gradient-to-r from-primary-dark via-primary-light to-primary",
+      "shadow-lg shadow-primary/10 dark:shadow-primary-dark/10",
       "border-b border-white/10",
       "backdrop-blur-md"
     )}>
@@ -55,7 +54,7 @@ const MainContentHeader = () => {
             "absolute -bottom-12 left-1/2 -translate-x-1/2",
             "px-3 py-1.5 rounded-lg",
             "bg-white/95 backdrop-blur-sm",
-            "text-[#e87a64] dark:text-[#132541] font-medium",
+            "text-primary-dark dark:text-primary-light font-medium",
             "shadow-lg shadow-black/5",
             "opacity-0 group-hover:opacity-100 transition-all duration-200",
             "pointer-events-none"
