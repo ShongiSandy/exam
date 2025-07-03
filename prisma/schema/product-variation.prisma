@@ -1,0 +1,19 @@
+model Variation {
+    id String @id @default(uuid())
+
+    name     String
+    color    String 
+    size     String
+    sku      String 
+    quantity Int 
+    price    Float 
+    imageUrl String 
+
+    productId    String
+    product      Product        @relation(fields: [productId], references: [id], onDelete: Cascade)
+    CartItem     CartItem[]
+    OrderItem    OrderItem[]
+    WishlistItem WishlistItem[] 
+
+    @@map("variations")
+}

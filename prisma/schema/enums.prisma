@@ -1,0 +1,51 @@
+enum UserRole {
+    USER
+    CUSTOMER
+    PROCUSTOMER
+    EDITOR
+    ADMIN
+    SUPERADMIN
+    MANAGER
+}
+
+enum SubscriptionStatus {
+    ACTIVE
+    UNSUBSCRIBED
+}
+
+enum OrderStatus {
+    PENDING
+    PROCESSING
+    SHIPPED
+    DELIVERED
+    CANCELLED
+    REFUNDED
+}
+
+enum StockStatus {
+    IN_STOCK
+    LOW_STOCK
+    OUT_OF_STOCK
+}
+
+enum Gender {
+    MEN
+    WOMEN
+    UNISEX
+    KIDS
+}
+
+enum Tier {
+    BRONZE
+    SILVER
+    GOLD
+    PLATINUM
+}
+
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  CLOSED
+  RESOLVED
+}

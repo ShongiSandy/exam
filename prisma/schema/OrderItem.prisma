@@ -1,0 +1,12 @@
+model OrderItem {
+  id          String    @id @default(uuid())
+  orderId     String
+  variationId String
+  quantity    Int
+  price       Float
+
+  order       Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  variation   Variation @relation(fields: [variationId], references: [id], onDelete: Restrict)
+
+  @@map("order_items")
+}

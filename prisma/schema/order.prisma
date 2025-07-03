@@ -1,0 +1,38 @@
+model Order {
+  id String @id @default(uuid())
+
+  paymentIntentId String? @unique
+
+  captivityBranch     String
+  methodOfCollection  String
+  salesRep            String?
+  referenceNumber     String?
+  firstName           String
+  lastName            String
+  companyName         String
+  countryRegion       String
+  streetAddress       String
+  apartmentSuite      String?
+  townCity            String
+  province            String
+  postcode            String
+  phone               String
+  email               String
+  orderNotes          String?
+  status              OrderStatus 
+  totalAmount         Float
+  agreeTerms          Boolean
+  receiveEmailReviews Boolean?
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+
+  orderItems          OrderItem[]
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade) 
+
+
+  @@index([paymentIntentId])
+
+  @@map("orders")
+}

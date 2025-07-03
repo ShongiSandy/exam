@@ -1,0 +1,41 @@
+// prisma/schema/user.prisma
+
+model User {
+    id                     String   @id @default(uuid())
+    username               String   @unique
+    firstName              String
+    lastName               String
+    displayName            String
+    email                  String   @unique
+    passwordHash           String
+    phoneNumber            String   @default("")
+    streetAddress          String
+    suburb                 String?
+    townCity               String
+    postcode               String
+    country                String
+    avatarUrl              String?
+    backgroundUrl          String?
+    image                  String?  // Add this field to store the image URL
+    agreeTerms             Boolean  @default(false)
+    role                   UserRole                 @default(USER) // Assuming UserRole enum defined
+    tier                   Tier                     @default(BRONZE) // Assuming Tier enum defined
+    Session                Session[]
+    Product                Product[]
+    Slide                  Slide[]
+    NewArrival             NewArrival[]
+    BestSeller             BestSeller[]
+    OnSale                 OnSale[]
+    NewsletterSubscription NewsletterSubscription[]
+    Audio                  Audio[]
+    Order                  Order[]
+    TierAppForm            TierAppForm[]
+    Cart                   Cart?
+    Wishlist               Wishlist?
+    createdTickets SupportTicket[] @relation("CreatedTickets")
+    sentMessages   Message[]       @relation("SentMessages")
+    updatedCollectionBanners CollectionBanner[]
+    checkoutPreference     UserCheckoutPreference?
+
+    @@map("users")
+}

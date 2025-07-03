@@ -1,0 +1,15 @@
+model WishlistItem {
+    id        String   @id @default(uuid())
+    createdAt DateTime @default(now())
+
+    wishlistId String
+    wishlist   Wishlist @relation(fields: [wishlistId], references: [id], onDelete: Cascade)
+
+    variationId String
+    variation   Variation @relation(fields: [variationId], references: [id], onDelete: Cascade)
+    Product     Product?  @relation(fields: [productId], references: [id])
+    productId   String?
+
+    @@unique([wishlistId, variationId]) 
+    @@map("wishlist_items")
+}

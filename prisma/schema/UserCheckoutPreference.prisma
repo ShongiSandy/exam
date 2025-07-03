@@ -1,0 +1,14 @@
+model UserCheckoutPreference {
+  id              String    @id @default(uuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  shippingAddress String
+  billingAddress  String
+  shippingMethod  String
+  paymentMethod   String
+  saveInfo        Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("user_checkout_preferences")
+}

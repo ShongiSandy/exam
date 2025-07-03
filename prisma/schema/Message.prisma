@@ -1,0 +1,11 @@
+model Message {
+  id            String   @id @default(cuid())
+  content       String   @db.Text 
+  createdAt     DateTime @default(now())
+  senderId      String
+  sender        User     @relation("SentMessages", fields: [senderId], references: [id], onDelete: Cascade)
+  attachmentUrl String?  // Add this line - optional string field for attachment URL
+
+  ticketId      String
+  ticket        SupportTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade) 
+}
