@@ -1,5 +1,5 @@
 import React from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UserCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,7 @@ const AuthModal = () => {
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] p-0 overflow-hidden">
+        <DialogTitle className="sr-only">Authentication</DialogTitle>
         <Tabs defaultValue="login" className="w-full">
           <TabsList className="w-full grid grid-cols-2">
             <TabsTrigger value="login">Login</TabsTrigger>

@@ -38,23 +38,24 @@ const RoutingHubPage = () => {
       {/* Grid for the cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {hubItems.map((item) => (
-          <Link href={item.href} key={item.title} legacyBehavior passHref>
-            <a className="block hover:scale-[1.02] transition-transform duration-200">
-              <Card className="h-full hover:border-primary/50 cursor-pointer">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-lg font-semibold">
-                    {item.title}
-                  </CardTitle>
-                  {/* Use cn here */}
-                  <item.icon className={cn("h-6 w-6", item.color)} />
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
+          <Link 
+            href={item.href} 
+            key={item.title}
+            className="block hover:scale-[1.02] transition-transform duration-200"
+          >
+            <Card className="h-full hover:border-primary/50 cursor-pointer">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-lg font-semibold">
+                  {item.title}
+                </CardTitle>
+                <item.icon className={cn("h-6 w-6", item.color)} />
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </CardContent>
+            </Card>
           </Link>
         ))}
       </div>

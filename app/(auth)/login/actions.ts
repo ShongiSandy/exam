@@ -14,7 +14,7 @@ const roleRoutes: Record<UserRole, string> = {
   [UserRole.PROCUSTOMER]: "/pro",
   [UserRole.EDITOR]: "/",
   [UserRole.ADMIN]: "/admin",
-  [UserRole.SUPERADMIN]: "/routing-hub",
+  [UserRole.SUPERADMIN]: "/super-admin/routing-hub",
   [UserRole.MANAGER]: "/manager",
 } as const;
 
